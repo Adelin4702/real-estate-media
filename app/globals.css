@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    @apply font-sans;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+a:hover {
+    color: #5cd8e6;
+}
+
+/*button {*/
+/*    background-color: #5cd8e6;*/
+/*}*/
+
+.next-arrow, .prev-arrow {
+    color: #5cd8e6;
+    font-weight: bold;
+    font-size: xx-large;
+    /*background-color: black;*/
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* mai mare decât restul elementelor */
+    background-color: white; /* sau orice alt fundal */
+}
