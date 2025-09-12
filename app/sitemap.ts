@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
-            url: 'https://real-estate-media-pied.vercel.app/servicii',
+            url: 'https://real-estate-media-pied.vercel.app/services',
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.8,

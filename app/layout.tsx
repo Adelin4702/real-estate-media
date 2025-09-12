@@ -23,7 +23,7 @@
     });
 
     export const metadata: Metadata = {
-        title: "Real Estate Media - Servicii Profesionale de Media Imobiliară",
+        title: "AR Real Estate Media - Servicii Profesionale de Media Imobiliară",
         description: "Servicii profesionale de media imobiliară: fotografie, video, tur virtual 360°, drone pentru proprietăți. Prezentăm imobilele în modul cel mai atractiv.",
         keywords: "fotografie imobiliară, video imobiliară, tur virtual 360, drone imobiliare, media imobiliară, prezentare proprietăți, marketing imobiliar, fotograf proprietăți",
         robots: "index, follow",
