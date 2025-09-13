@@ -25,7 +25,7 @@ export default function PortfolioPage() {
                         <PortfolioCategory
                             key={category.id}
                             category={category}
-                            initialLoad={index === 0 ? 9 : 6} // Prima categorie încarcă mai multe
+                            initialLoad={6} // Prima categorie încarcă mai multe
                             loadMoreCount={6}
                         />
                     ))}
@@ -50,7 +50,7 @@ export default function PortfolioPage() {
                             Solicită o Ofertă
                         </a>
                         <a
-                            href="/servicii"
+                            href="/packages"
                             className="px-8 py-4 border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-gray-800 transition-colors duration-300"
                         >
                             Vezi Serviciile

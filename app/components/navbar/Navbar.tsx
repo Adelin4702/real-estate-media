@@ -24,13 +24,14 @@ export default function Navbar() {
                     transition={{duration: 0.5, ease: 'easeOut'}}
                     className="flex items-center space-x-2"
                 >
-                    <Image
-                        src="/logo.jpg"
-                        alt="Logo"
-                        width={90}
-                        height={50}
-                    />
-                    <Link href="/" aria-label="Real Estate Media Home"/>
+                    <Link href="/" aria-label="Real Estate Media Home">
+                        <Image
+                            src="/logo.jpg"
+                            alt="Logo"
+                            width={90}
+                            height={50}
+                        />
+                    </Link>
                 </motion.div>
 
                 {/* Meniu Desktop */}
