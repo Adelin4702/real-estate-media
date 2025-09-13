@@ -1,4 +1,3 @@
-// data/portfolioData.ts
 export interface ImageData {
     id: string;
     src: string;
@@ -17,153 +16,218 @@ export interface CategoryData {
 export const portfolioData: CategoryData[] = [
     {
         id: "developer",
-        title: "Fotografii dezvoltatori imobiliari",
-        description: "", //"Fotografie profesională pentru apartamente moderne și clasice",
+        title: "PORTOFOLIU DEZVOLTATORI IMOBILIARI",
+        description: "",
         images: [
+            // Property 1: Apartment 1 in residential complex
             {
                 id: "dev1",
                 src: "/portfolio/developer/img_1.jpeg",
-                alt: "Living modern cu design contemporan",
-                width: 100,
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            {
+                id: "dev2",
+                src: "/portfolio/developer/img_2.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            {
+                id: "dev3",
+                src: "/portfolio/developer/img_3.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            // Property 2: Apartment 2 in residential complex
+            {
+                id: "dev4",
+                src: "/portfolio/developer/img_4.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            {
+                id: "dev5",
+                src: "/portfolio/developer/img_5.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            {
+                id: "dev6",
+                src: "/portfolio/developer/img_6.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            // Property 3: Apartment 3 in residential complex
+            {
+                id: "dev7",
+                src: "/portfolio/developer/img_7.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            {
+                id: "dev8",
+                src: "/portfolio/developer/img_8.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            {
+                id: "dev9",
+                src: "/portfolio/developer/img_9.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            }
+        ]
+    },
+    {
+        id: "airbnb",
+        title: "PORTOFOLIU AIRBNB",
+        description: "",
+        images: [
+            // Property 1: Airbnb Apartment
+            {
+                id: "airbnb1",
+                src: "/portfolio/airbnb/img_1.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            {
+                id: "airbnb2",
+                src: "/portfolio/airbnb/img_2.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            {
+                id: "airbnb3",
+                src: "/portfolio/airbnb/img_3.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            // Property 2: Airbnb Cabin
+            {
+                id: "airbnb4",
+                src: "/portfolio/airbnb/img_4.jpg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            {
+                id: "airbnb5",
+                src: "/portfolio/airbnb/img_5.jpg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            {
+                id: "airbnb6",
+                src: "/portfolio/airbnb/img_6.jpg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            // Property 3: Airbnb Villa with Jacuzzi
+            {
+                id: "airbnb7",
+                src: "/portfolio/airbnb/img_7.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            {
+                id: "airbnb8",
+                src: "/portfolio/airbnb/img_8.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            },
+            {
+                id: "airbnb9",
+                src: "/portfolio/airbnb/img_9.jpeg",
+                alt: "",
+                width: 800,
+                height: 600
+            }
+        ]
+    },
+    {
+        id: "apartments",
+        title: "PORTOFOLIU AGENȚII IMOBILIARE",
+        description: "",
+        images: [
+            // Property 1: Apartment 1
+            {
+                id: "apt1",
+                src: "/portfolio/agency/img_1.jpeg",
+                alt: "",
+                width: 800,
                 height: 600
             },
             {
                 id: "apt2",
-                src: "/portfolio/apartamente/bucatarie-alba.jpg",
-                alt: "Bucătărie albă cu finisaje premium",
+                src: "/portfolio/agency/img_2.jpeg",
+                alt: "",
                 width: 800,
                 height: 600
             },
             {
                 id: "apt3",
-                src: "/portfolio/apartamente/dormitor-matrimonial.jpg",
-                alt: "Dormitor matrimonial elegant",
+                src: "/portfolio/agency/img_3.jpeg",
+                alt: "",
                 width: 800,
                 height: 600
             },
+            // Property 2: Apartment 2
             {
                 id: "apt4",
-                src: "/portfolio/apartamente/balcon-vedere.jpg",
-                alt: "Balcon cu vedere panoramică",
+                src: "/portfolio/agency/img_4.jpeg",
+                alt: "",
                 width: 800,
                 height: 600
             },
             {
                 id: "apt5",
-                src: "/portfolio/apartamente/baie-moderna.jpg",
-                alt: "Baie modernă cu finisaje de lux",
+                src: "/portfolio/agency/img_5.jpeg",
+                alt: "",
                 width: 800,
                 height: 600
             },
             {
                 id: "apt6",
-                src: "/portfolio/apartamente/hol-intrare.jpg",
-                alt: "Hol de intrare spatios",
+                src: "/portfolio/agency/img_6.jpeg",
+                alt: "",
                 width: 800,
                 height: 600
-            }
-        ]
-    },
-    {
-        id: "case",
-        title: "Case & Vile",
-        description: "Prezentări complete pentru proprietăți rezidențiale premium",
-        images: [
+            },
+            // Property 3: Apartment 3
             {
-                id: "casa1",
-                src: "/portfolio/case/vila-moderna-exterior.jpg",
-                alt: "Vilă modernă cu arhitectură contemporană",
+                id: "apt7",
+                src: "/portfolio/agency/img_7.jpeg",
+                alt: "",
                 width: 800,
                 height: 600
             },
             {
-                id: "casa2",
-                src: "/portfolio/case/gradina-amenajata.jpg",
-                alt: "Grădină amenajată cu piscină",
+                id: "apt8",
+                src: "/portfolio/agency/img_8.jpeg",
+                alt: "",
                 width: 800,
                 height: 600
             },
             {
-                id: "casa3",
-                src: "/portfolio/case/living-casa-mare.jpg",
-                alt: "Living spațios cu tavan înalt",
-                width: 800,
-                height: 600
-            },
-            {
-                id: "casa4",
-                src: "/portfolio/case/bucatarie-insula.jpg",
-                alt: "Bucătărie cu insulă centrală",
-                width: 800,
-                height: 600
-            },
-            {
-                id: "casa5",
-                src: "/portfolio/case/terasa-acoperita.jpg",
-                alt: "Terasă acoperită pentru relaxare",
-                width: 800,
-                height: 600
-            }
-        ]
-    },
-    {
-        id: "comercial",
-        title: "Spații Comerciale",
-        description: "Media profesională pentru birouri, magazine și spații comerciale",
-        images: [
-            {
-                id: "com1",
-                src: "/portfolio/comercial/birou-open-space.jpg",
-                alt: "Birou open space modern",
-                width: 800,
-                height: 600
-            },
-            {
-                id: "com2",
-                src: "/portfolio/comercial/magazin-fashion.jpg",
-                alt: "Magazin fashion cu design elegant",
-                width: 800,
-                height: 600
-            },
-            {
-                id: "com3",
-                src: "/portfolio/comercial/restaurant-interior.jpg",
-                alt: "Interior restaurant cu atmosferă intimă",
-                width: 800,
-                height: 600
-            },
-            {
-                id: "com4",
-                src: "/portfolio/comercial/sala-conferinte.jpg",
-                alt: "Sală de conferințe echipată modern",
-                width: 800,
-                height: 600
-            }
-        ]
-    },
-    {
-        id: "drone",
-        title: "Video Drone",
-        description: "Filmări aeriene spectaculoase pentru proprietăți premium",
-        images: [
-            {
-                id: "drone1",
-                src: "/portfolio/drone/vila-aerial-1.jpg",
-                alt: "Vedere aeriană vilă cu piscină",
-                width: 800,
-                height: 600
-            },
-            {
-                id: "drone2",
-                src: "/portfolio/drone/complex-rezidential.jpg",
-                alt: "Complex rezidențial văzut din aer",
-                width: 800,
-                height: 600
-            },
-            {
-                id: "drone3",
-                src: "/portfolio/drone/casa-curte-mare.jpg",
-                alt: "Casă cu curte mare - perspectivă aeriană",
+                id: "apt9",
+                src: "/portfolio/agency/img_9.jpeg",
+                alt: "",
                 width: 800,
                 height: 600
             }

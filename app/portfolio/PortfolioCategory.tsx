@@ -15,13 +15,13 @@ const PortfolioCategory = ({
                                initialLoad = 6,
                                loadMoreCount = 6
                            }: PortfolioCategoryProps) => {
+    console.log('Category Data:', category); // Debug: Log category data
     const [visibleImages, setVisibleImages] = useState(initialLoad);
     const [loading, setLoading] = useState(false);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     const loadMore = () => {
         setLoading(true);
-        // Simulez încărcare pentru UX mai bun
         setTimeout(() => {
             setVisibleImages(prev => Math.min(prev + loadMoreCount, category.images.length));
             setLoading(false);
@@ -33,55 +33,61 @@ const PortfolioCategory = ({
     return (
         <div className="mb-16">
             {/* Header categoriei */}
-            <div className="mb-8 text-center">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <div className="mb-8">
+                <h2 className="text-xl md:text-4xl font-bold text-gray-900 mb-4">
                     {category.title}
                 </h2>
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                    {category.description}
-                </p>
-                <div className="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+                <div className="w-1/2 md:w-1/4 h-1 bg-teal-500 mt-4"></div>
             </div>
 
             {/* Grid cu imagini */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                {category.images.slice(0, visibleImages).map((image, index) => (
-                    <div
-                        key={image.id}
-                        className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-                        onClick={() => setSelectedImage(image.src)}
-                    >
-                        {/* Container pentru imagine */}
-                        <div className="aspect-[4/3] relative">
-                            <Image
-                                src={image.src}
-                                alt={image.alt}
-                                fill
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                loading={index < initialLoad ? "eager" : "lazy"}
-                                placeholder="blur"
-                                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                            />
+                {category.images.length === 0 ? (
+                    <p className="text-red-500 col-span-full text-center">
+                        No images available in this category
+                    </p>
+                ) : (
+                    category.images.slice(0, visibleImages).map((image, index) => (
+                        <div
+                            key={image.id}
+                            className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                            onClick={() => {
+                                console.log('Image clicked:', image.src); // Debug: Log clicked image
+                                setSelectedImage(image.src);
+                            }}
+                        >
+                            {/* Container pentru imagine */}
+                            <div className="relative w-full aspect-[4/3]">
+                                <Image
+                                    src={image.src}
+                                    alt={image.alt}
+                                    width={400}
+                                    height={300}
+                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    loading={index < initialLoad ? "eager" : "lazy"}
+                                    onLoad={() => console.log('Image loaded:', image.src)} // Debug: Confirm image load
+                                    onError={() => console.log('Image failed to load:', image.src)} // Debug: Log image errors
+                                />
 
-                            {/* Overlay pe hover */}
-                            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                                <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                                    </svg>
+                                {/* Overlay pe hover */}
+                                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                                    <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Caption */}
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                            <p className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                {image.alt}
-                            </p>
+                            {/* Caption */}
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                <p className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    {image.alt}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))
+                )}
             </div>
 
             {/* Load More Button */}
@@ -90,7 +96,7 @@ const PortfolioCategory = ({
                     <button
                         onClick={loadMore}
                         disabled={loading}
-                        className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-blue-400 transition-colors duration-300 font-medium"
+                        className="px-8 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 disabled:bg-teal-400 transition-colors duration-300 font-medium"
                     >
                         {loading ? (
                             <>
@@ -110,10 +116,10 @@ const PortfolioCategory = ({
             {/* Modal pentru imagine mărită */}
             {selectedImage && (
                 <div
-                    className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+                    className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 pt-16"
                     onClick={() => setSelectedImage(null)}
                 >
-                    <div className="relative max-w-5xl max-h-full">
+                    <div className="relative max-h-full">
                         <button
                             onClick={() => setSelectedImage(null)}
                             className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
@@ -127,7 +133,9 @@ const PortfolioCategory = ({
                             alt="Imagine mărită"
                             width={1200}
                             height={800}
-                            className="max-w-full max-h-full object-contain"
+                            className="w-auto h-[90vh] object-contain"
+                            onLoad={() => console.log('Modal image loaded:', selectedImage)} // Debug: Confirm modal image load
+                            onError={() => console.log('Modal image failed to load:', selectedImage)} // Debug: Log modal image errors
                         />
                     </div>
                 </div>
