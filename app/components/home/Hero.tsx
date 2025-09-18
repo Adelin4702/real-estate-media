@@ -52,7 +52,7 @@ export default function Hero() {
                     whileTap={{ scale: 0.95 }}
                 >
                     <Link
-                        href="#contact"
+                        href="/contact"
                         className="inline-block text-white border-2 px-6 py-3 rounded-full font-semibold  transition-colors duration-300"
                     >
                         Contactează-ne Acum

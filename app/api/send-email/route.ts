@@ -12,19 +12,19 @@ export async function POST(request: NextRequest) {
 
         // Create a transporter using environment variables
         const transporter = nodemailer.createTransport({
-            host: process.env.EMAIL_HOST, // e.g., 'smtp.gmail.com'
+            host: process.env.EMAIL_HOST,
             port: parseInt(process.env.EMAIL_PORT || '587'),
-            secure: process.env.EMAIL_PORT === '465', // true for 465, false for other ports
+            secure: process.env.EMAIL_PORT === '465',
             auth: {
-                user: process.env.EMAIL_USER, // e.g., 'alex.mosora@gmail.com'
-                pass: process.env.EMAIL_PASS, // App password or email password
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
             },
         });
 
         // Email options
         const mailOptions = {
             from: `"${name}" <${email}>`, // Sender name and email
-            to: 'adelinpricop12@gmail.com', // Recipient email
+            to: 'alexandrumosora711@gmail.com', // Recipient email
             subject: `Mesaj nou de la ${name} prin formularul de contact`,
             text: `
 Nume: ${name}

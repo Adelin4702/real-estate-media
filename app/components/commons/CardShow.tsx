@@ -12,7 +12,6 @@ import {Card} from "./types";
 import {cardVariants} from "./variants";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-// Componente pentru săgeți
 const NextArrow = ({ onClick }: { onClick?: () => void }) => (
     <div
         className="next-arrow absolute right-0 bottom-1/2 transform -translate-y-1/2 cursor-pointer z-10"
@@ -63,11 +62,12 @@ export default function CardShow({ items }: CardShowProps) {
 
         pauseTimeout.current = setTimeout(() => {
             sliderRef.current?.slickPlay();
-        }, 5000); // 10.000 ms
+        }, 5000);
     };
 
     return (
-        <section className="bg-white pb-12">
+        <section
+            id="cardShow" className="bg-white pb-12">
             <div className="container mx-auto px-10" onTouchEnd={handleTouchStart}>
                 <Slider {...settings} ref={sliderRef}>
                     {items.map((card, index) => (

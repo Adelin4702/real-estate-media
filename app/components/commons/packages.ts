@@ -15,7 +15,6 @@ export const PACKAGES: Card[] = [
             '✓ Spații comerciale ( ofertă realizată în funcție de suprafața)\n' +
             '✓ Pensiune ( ofertă realizată în funcție de suprafața)\n' +
             '✓ Hoteluri ( ofertă realizată în funcție de suprafața)',
-        // button: { label: 'Află mai multe', href: '/services#photo' },
         package: true,
         icons: [faCamera, faFilm]
     },
@@ -32,7 +31,6 @@ export const PACKAGES: Card[] = [
             '✓ Spații comerciale (ofertă realizată în funcție de suprafața)\n' +
             '✓ Pensiune (ofertă realizată în funcție de suprafața)\n' +
             '✓ Hoteluri (ofertă realizată în funcție de suprafața)',
-        // button: { label: 'Află mai multe', href: '/services#video' },
         package: true,
         icons: [faCamera, faVideo]
     },
@@ -48,7 +46,6 @@ export const PACKAGES: Card[] = [
             '✓ Spații comerciale (ofertă realizată în funcție de suprafata)\n' +
             '✓ Pensiune (ofertă realizată în funcție de suprafața)\n' +
             '✓ Hotel (ofertă realizată în funcție de suprafața)',
-        // button: { label: 'Află mai multe', href: '/services#tour' },
         package: true,
         icons: [faCamera, faFilm, faStreetView]
     },

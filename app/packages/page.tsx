@@ -24,9 +24,9 @@ export default function About() {
                         className="flex justify-center items-center"
                     >
                         <Image
-                            src="/packages-image.jpg"
+                            src="/packages-image.webp"
                             alt="Proprietate imobiliară"
-                            width={0} // necesar pentru layout="intrinsic"
+                            width={0}
                             height={0}
                             sizes="100wh"
                             className="w-fit h-auto object-cover rounded-lg"
@@ -87,7 +87,7 @@ export default function About() {
                 viewport={{ once: true }}
                 className="text-xl font-medium md:text-2xl text-center mb-8 px-5 md:px-28 text-gray-700"
             >
-                Fiecare proiect este unic. Dacă aveți nevoie de un serviciu individual, <Link href={"/contact"}> contactați-ne </Link> și vă vom crea o soluție personalizată.
+                Fiecare proiect este unic. Dacă aveți nevoie de un serviciu individual, <Link href={"/contact#contact"}> contactați-ne </Link> și vă vom crea o soluție personalizată.
             </motion.h4>
         </section>
     );

@@ -1,17 +1,17 @@
-"use client"; // Indică faptul că aceasta este o componentă de client
+"use client";
 
 import React, { useState, useEffect } from "react";
-import CookieConsent from "react-cookie-consent"; // Import normal
+import CookieConsent from "react-cookie-consent";
 
 const CookieConsentWrapper = () => {
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-        setIsClient(true); // Setează la true când componenta este montată pe client
+        setIsClient(true);
     }, []);
 
     if (!isClient) {
-        return null; // Nu renderiza nimic pe server
+        return null;
     }
 
     return (

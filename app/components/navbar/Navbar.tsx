@@ -26,7 +26,7 @@ export default function Navbar() {
                 >
                     <Link href="/" aria-label="Real Estate Media Home">
                         <Image
-                            src="/logo.jpg"
+                            src="/logo-sm.webp"
                             alt="Logo"
                             width={90}
                             height={50}

@@ -9,11 +9,10 @@ export default function Contact() {
             {/* Hero Section */}
             <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh]">
                 <Image
-                    src="/contact-image.jpg"
+                    src="/contact-image.webp"
                     alt="Real Estate Media"
                     fill
                     className="object-cover z-0"
-                    quality={90}
                 />
                 {/* Black Overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-70 z-10 flex flex-col justify-center items-center text-center px-4 sm:px-6">
@@ -31,7 +30,7 @@ export default function Contact() {
                 </div>
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-bold pt-16">CONTACTEAZA-NE</h1>
+            <h1  id="contact"  className="text-3xl md:text-5xl font-bold pt-16">CONTACTEAZA-NE</h1>
             <p className=" text-lg w-full px-2 md:px-0 md:w-2/5 py-6 text-gray-600 text-center" >
                 Ai o proprietate de prezentat și vrei să te asiguri că strălucește? Suntem aici să te ajutăm!
                 Contactează-ne acum pentru o discuție despre cum putem transforma împreună viziunea ta în realitate și maximiza
@@ -46,12 +45,11 @@ export default function Contact() {
                         name="Alex Mosora - Owner AR Real Estate Media"
                         description="Sună-mă acum pentru a programa o ședință"
                         availability="Luni-Vineri: 09-19"
-                        imageSrc="/contact-person-image.jpg"
-                        email="alex.mosora@gmail.com"
-                        phone="(0742) 566 629"
-                        facebook="https://www.facebook.com/AlexMosora"
-                        tiktok="https://www.tiktok.com/@alexmosora"
-                        whatsapp="https://wa.me/40742566629"
+                        imageSrc="/contact-person-image.webp"
+                        email={`${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`}
+                        phone={`${process.env.NEXT_PUBLIC_MOBILE}`}
+                        facebook={`${process.env.NEXT_PUBLIC_FACEBOOK_URL}`}
+                        whatsapp={`${process.env.NEXT_PUBLIC_WHATSAPP_URL}`}
                     />
                 </div>
 

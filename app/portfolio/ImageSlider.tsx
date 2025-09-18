@@ -69,7 +69,7 @@ const ImageComparisonSlider = ({
                 width={width}
                 height={height}
                 style={{
-                    objectPosition: 'left top', // 👈 fix aici
+                    objectPosition: 'left top',
                 }}
                 className="absolute top-0 left-0 w-full h-full object-cover"
             />
@@ -85,7 +85,7 @@ const ImageComparisonSlider = ({
                     width={width}
                     height={height}
                     style={{
-                        objectPosition: 'left top', // 👈 fix aici
+                        objectPosition: 'left top',
                     }}
                     className="w-full h-full object-cover"
                 />

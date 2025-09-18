@@ -15,7 +15,6 @@ const PortfolioCategory = ({
                                initialLoad = 6,
                                loadMoreCount = 6
                            }: PortfolioCategoryProps) => {
-    console.log('Category Data:', category); // Debug: Log category data
     const [visibleImages, setVisibleImages] = useState(initialLoad);
     const [loading, setLoading] = useState(false);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -52,7 +51,6 @@ const PortfolioCategory = ({
                             key={image.id}
                             className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
                             onClick={() => {
-                                console.log('Image clicked:', image.src); // Debug: Log clicked image
                                 setSelectedImage(image.src);
                             }}
                         >
@@ -65,8 +63,6 @@ const PortfolioCategory = ({
                                     height={300}
                                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                     loading={index < initialLoad ? "eager" : "lazy"}
-                                    onLoad={() => console.log('Image loaded:', image.src)} // Debug: Confirm image load
-                                    onError={() => console.log('Image failed to load:', image.src)} // Debug: Log image errors
                                 />
 
                                 {/* Overlay pe hover */}
@@ -134,8 +130,6 @@ const PortfolioCategory = ({
                             width={1200}
                             height={800}
                             className="w-auto h-[90vh] object-contain"
-                            onLoad={() => console.log('Modal image loaded:', selectedImage)} // Debug: Confirm modal image load
-                            onError={() => console.log('Modal image failed to load:', selectedImage)} // Debug: Log modal image errors
                         />
                     </div>
                 </div>

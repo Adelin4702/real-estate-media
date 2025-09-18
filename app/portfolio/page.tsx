@@ -16,16 +16,16 @@ export default function PortfolioPage() {
                 </p>
 
             </section>
-            <ImageComparisonSlider beforeSrc={"/portfolio/before.jpg"} afterSrc={"/portfolio/after.jpg"} beforeAlt={""}
+            <ImageComparisonSlider beforeSrc={"/portfolio/before.webp"} afterSrc={"/portfolio/after.webp"} beforeAlt={""}
                                    afterAlt={""}/>
             {/* Portfolio Categories */}
             <section className="py-16 ">
                 <div className="container mx-auto px-4">
-                    {portfolioData.map((category, index) => (
+                    {portfolioData.map((category) => (
                         <PortfolioCategory
                             key={category.id}
                             category={category}
-                            initialLoad={6} // Prima categorie încarcă mai multe
+                            initialLoad={6}
                             loadMoreCount={6}
                         />
                     ))}
@@ -44,13 +44,13 @@ export default function PortfolioPage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
-                            href="/contact"
+                            href="/contact#contact"
                             className="px-8 py-4 bg-yellow-500 text-gray-900 rounded-lg font-bold hover:bg-yellow-400 hover:text-gray-800 transition-colors duration-300"
                         >
                             Solicită o Ofertă
                         </a>
                         <a
-                            href="/packages"
+                            href="/packages#cardShow"
                             className="px-8 py-4 border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-gray-800 transition-colors duration-300"
                         >
                             Vezi Serviciile
@@ -58,30 +58,6 @@ export default function PortfolioPage() {
                     </div>
                 </div>
             </section>
-
-            {/* Statistics */}
-            {/*<section className="py-16 bg-gray-100">*/}
-            {/*    <div className="container mx-auto px-4">*/}
-            {/*        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">*/}
-            {/*            <div className="bg-white p-8 rounded-lg shadow-md">*/}
-            {/*                <div className="text-3xl font-bold text-blue-600 mb-2">150+</div>*/}
-            {/*                <div className="text-gray-600">Proprietăți Fotografiate</div>*/}
-            {/*            </div>*/}
-            {/*            <div className="bg-white p-8 rounded-lg shadow-md">*/}
-            {/*                <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>*/}
-            {/*                <div className="text-gray-600">Video Drone</div>*/}
-            {/*            </div>*/}
-            {/*            <div className="bg-white p-8 rounded-lg shadow-md">*/}
-            {/*                <div className="text-3xl font-bold text-blue-600 mb-2">25+</div>*/}
-            {/*                <div className="text-gray-600">Tururi Virtuale</div>*/}
-            {/*            </div>*/}
-            {/*            <div className="bg-white p-8 rounded-lg shadow-md">*/}
-            {/*                <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>*/}
-            {/*                <div className="text-gray-600">Clienți Mulțumiți</div>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</section>*/}
         </div>
     );
 }

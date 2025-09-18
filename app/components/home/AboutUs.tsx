@@ -1,12 +1,9 @@
 'use client';
 
 import React from 'react';
-import {motion, Variants} from 'framer-motion';
+import {motion} from 'framer-motion';
 import Image from 'next/image';
 import {imageVariants, textVariants} from "../commons/variants";
-
-// Variante pentru animațiile Framer Motion
-
 
 export default function AboutUs() {
     return (
@@ -37,9 +34,9 @@ export default function AboutUs() {
                 {/* Grilă de imagini */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {[
-                        { src: '/about-us-1.jpg', alt: 'Apartament modern' },
-                        { src: '/about-us-2.jpg', alt: 'Reședință de lux' },
-                        { src: '/about-us-3.jpg', alt: 'Spațiu comercial' },
+                        { src: '/about-us-1.webp', alt: 'Apartament modern' },
+                        { src: '/about-us-2.webp', alt: 'Reședință de lux' },
+                        { src: '/about-us-3.webp', alt: 'Spațiu comercial' },
                     ].map((image, index) => (
                         <motion.div
                             key={index}

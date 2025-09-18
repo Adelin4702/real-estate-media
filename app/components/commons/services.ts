@@ -13,10 +13,9 @@ export const SERVICES: Card[] = [
     {
         id: '2',
         title: 'Video Prezentare Proprietate',
-        iframe: 'https://videopress.com/v/cCAZUjPQ',
+        iframe: 'https://player.mux.com/DP9Pzgga2Pc5nvN3AgFICg2ocL3GDMdlJCoSr6YcypQ?autoplay=true&muted=true&loop=true&metadata-video-title=hero-video',
         description:
             'Producem videoclipuri de prezentare a proprietății în format orizontal și vertical 4K, ideal pentru o vizualizare cinematografică detaliată. Includem cadre profesionale filmate de la sol și din aer, evidențiind cele mai importante aspecte ale spațiului.',
-        // button: { label: 'Află mai multe', href: '/services#video' },
         package: false,
     },
     {
@@ -39,7 +38,7 @@ export const SERVICES: Card[] = [
     {
         id: '5',
         title: 'Video Reel Vertical 4K Prezentare Proprietate Agent',
-        iframe: 'https://videopress.com/v/wNnNCriT',
+        iframe: 'https://player.mux.com/DP9Pzgga2Pc5nvN3AgFICg2ocL3GDMdlJCoSr6YcypQ?autoplay=true&muted=true&loop=true&metadata-video-title=hero-video',
         description:
             'Creăm videoclipuri scurte și dinamice în format vertical 4K, perfecte pentru promovarea rapidă a proprietăților pe platformele sociale. Concepute pentru a atrage atenția și a oferi o privire rapidă asupra caracteristicilor cheie.',
         package: false,
@@ -47,7 +46,7 @@ export const SERVICES: Card[] = [
     {
         id: '6',
         title: 'Fotografii Ora Albastră',
-        image: '/service-bluehour.jpg',
+        image: '/service-bluehour.webp',
         description:
             'Realizăm fotografii artistice ale proprietății la apus, capturând lumina magică a “orei albastre” pentru o atmosferă unică și atrăgătoare. Aceste imagini premium adaugă o notă de eleganță și exclusivitate prezentării imobiliare.',
         package: false,

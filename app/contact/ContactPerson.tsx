@@ -11,7 +11,6 @@ interface ContactPersonProps {
     phone: string;
     facebook: string;
     whatsapp: string;
-    tiktok: string;
 }
 
 const ContactPerson = ({
@@ -23,7 +22,6 @@ const ContactPerson = ({
                            phone,
                            facebook,
                            whatsapp,
-                           tiktok,
                            }: ContactPersonProps) => {
     return (
         <div className="w-full max-w-lg py-12 sm:py-16 text-center">
@@ -66,11 +64,6 @@ const ContactPerson = ({
                     {whatsapp && (
                         <Link href={whatsapp} target="_blank" className="text-xl sm:text-2xl text-teal-600 hover:text-teal-800">
                             <FaWhatsapp />
-                        </Link>
-                    )}
-                    {tiktok && (
-                        <Link href={tiktok} target="_blank" className="text-xl sm:text-2xl text-teal-600 hover:text-teal-800">
-                            <FaTiktok />
                         </Link>
                     )}
                 </div>

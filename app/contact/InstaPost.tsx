@@ -1,7 +1,6 @@
 'use client'; // Pentru client-side în Next.js App Router
 
 export const InstaPost = () => {
-    // src exact ca în exemplul tău – SCHIMBĂ cu Reel valid public!
     const iframeSrc = "https://www.instagram.com/reel/DMngZgEsV3l/embed/captioned/?cr=1&v=14&wp=625&rd=https%3A%2F%2Faisb4634b550teenagelight.wordpress.com&rp=%2Fcontact%2F#%7B%22ci%22%3A0%2C%22os%22%3A704.8000000119209%7D";
 
     return (
@@ -21,7 +20,6 @@ export const InstaPost = () => {
                         className="instagram-media instagram-media-rendered w-full h-full"
                         id="instagram-embed-0"
                         src={iframeSrc}
-                        allowTransparency={true}
                         allowFullScreen={true}
                         frameBorder={0}
                         scrolling="no"
