@@ -40,7 +40,7 @@ export default function ContactForm() {
     return (
         <div className="w-full max-w-lg px-4 sm:px-6 py-8 sm:py-10">
             <form className="space-y-6 bg-gray-50 p-6 sm:p-8 rounded-xl shadow-lg" onSubmit={handleSubmit}>
-                <p className="text-center text-xl pb-2">Lasa-ne un mesaj</p>
+                <p className="text-center text-xl pb-2">Lasă-ne un mesaj</p>
 
                 <div>
                     <label className="block text-sm font-medium mb-1 text-gray-700" htmlFor="name">

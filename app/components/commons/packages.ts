@@ -4,7 +4,7 @@ import {faCamera, faFilm, faMobileAlt, faPaperPlane, faStreetView, faVideo} from
 export const PACKAGES: Card[] = [
     {
         id: '1',
-        title: 'STANARD',
+        title: 'STANDARD',
         description:
             'Pachet de bază ce include servicii **foto profesionale și video**. Ideal pentru o prezentare rapidă și eficientă.\n' +
             '\n** .**\n' +
