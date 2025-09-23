@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
         // Email options
         const mailOptions = {
             from: `"${name}" <${email}>`, // Sender name and email
-            to: 'alexandrumosora711@gmail.com', // Recipient email
+            to: 'arealestatemedia@gmail.com', // Recipient email
             subject: `Mesaj nou de la ${name} prin formularul de contact`,
             text: `
 Nume: ${name}

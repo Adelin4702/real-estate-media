@@ -1,4 +1,4 @@
-import { Card } from './types';
+import { Card } from '../components/commons/types';
 
 export const SERVICES: Card[] = [
     {
@@ -50,5 +50,17 @@ export const SERVICES: Card[] = [
         description:
             'Realizăm fotografii artistice ale proprietății la apus, capturând lumina magică a “orei albastre” pentru o atmosferă unică și atrăgătoare. Aceste imagini premium adaugă o notă de eleganță și exclusivitate prezentării imobiliare.',
         package: false,
+    },
+    {
+        id: '7',
+        title: 'NOU! Site-uri de prezentare',
+        image: '/site.webp',
+        description:
+            'Realizăm site-uri dedicate pentru proprietăți — design profesionist, conținut personalizat și funcționalități utile, precum galerie media și rezervări.',
+        package: false,
+        button: {
+            label: 'Vezi oferta',
+            href: '/packages#siteOffer'
+        }
     },
 ];

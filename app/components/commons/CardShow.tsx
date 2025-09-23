@@ -137,7 +137,7 @@ export default function CardShow({ items }: CardShowProps) {
                                 {card.button && (
                                     <Link
                                         href={card.button.href}
-                                        className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors mt-auto"
+                                        className="inline-block bg-teal-custom text-white px-4 rounded-full hover:bg-teal-custom-dark transition-colors mt-auto"
                                     >
                                         {card.button.label}
                                     </Link>

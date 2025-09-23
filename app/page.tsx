@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 import Hero from "./components/home/Hero";
 import AboutUs from "./components/home/AboutUs";
 import CardShow from "./components/commons/CardShow";
-import {SERVICES} from "./components/commons/services";
+import {SERVICES} from "./data/services";
 import {cardVariants} from "./components/commons/variants";
 
 export default function Home() {

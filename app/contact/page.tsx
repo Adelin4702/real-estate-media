@@ -2,6 +2,7 @@ import Image from 'next/image';
 import ContactPerson from "./ContactPerson";
 import ContactForm from "./ContactForm";
 import {InstaPost} from "./InstaPost";
+import PropertyWebsiteBanner from "../packages/SiteOffer";
 
 export default function Contact() {
     return (
@@ -30,7 +31,7 @@ export default function Contact() {
                 </div>
             </div>
 
-            <h1  id="contact"  className="text-3xl md:text-5xl font-bold pt-16">CONTACTEAZA-NE</h1>
+            <h1  id="contact"  className="text-3xl md:text-5xl font-bold pt-16">CONTACTEAZĂ-NE</h1>
             <p className=" text-lg w-full px-2 md:px-0 md:w-2/5 py-6 text-gray-600 text-center" >
                 Ai o proprietate de prezentat și vrei să te asiguri că strălucește? Suntem aici să te ajutăm!
                 Contactează-ne acum pentru o discuție despre cum putem transforma împreună viziunea ta în realitate și maximiza

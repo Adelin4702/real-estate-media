@@ -7,6 +7,7 @@ import CardShow from "../components/commons/CardShow";
 import {PACKAGES} from "../components/commons/packages";
 import Link from "next/link";
 import {cardVariants, imageVariants, textVariants} from "../components/commons/variants";
+import PropertyWebsiteBanner from "./SiteOffer";
 
 
 
@@ -80,6 +81,7 @@ export default function About() {
                 spectaculoase, asigurând o prezentare completă și atrăgătoare.
             </motion.h4>
             <CardShow items={PACKAGES}/>
+            <div id="siteOffer"/>
             <motion.h4
                 variants={cardVariants}
                 initial="initial"
@@ -89,6 +91,7 @@ export default function About() {
             >
                 Fiecare proiect este unic. Dacă aveți nevoie de un serviciu individual, <Link href={"/contact#contact"}> contactați-ne </Link> și vă vom crea o soluție personalizată.
             </motion.h4>
+            <PropertyWebsiteBanner />
         </section>
     );
 }

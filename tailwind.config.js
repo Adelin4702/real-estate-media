@@ -10,6 +10,10 @@ module.exports = {
             fontFamily: {
                 sans: ['var(--font-oswald)', ...fontFamily.serif],
             },
+            colors: {
+                'teal-custom': '#109dae',
+                'teal-custom-dark': '#0d8899',
+            },
         },
     },
     plugins: [],
