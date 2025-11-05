@@ -1,7 +1,7 @@
 'use client';
 
 import React, {useRef} from 'react';
-import {color, motion, Variants} from 'framer-motion';
+import {motion} from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import Slider from 'react-slick';
@@ -12,7 +12,7 @@ import {Card} from "./types";
 import {cardVariants} from "./variants";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-const NextArrow = ({ onClick }: { onClick?: () => void }) => (
+const NextArrow = ({onClick}: { onClick?: () => void }) => (
     <div
         className="next-arrow absolute right-0 bottom-1/2 transform -translate-y-1/2 cursor-pointer z-10"
         onClick={onClick}
@@ -22,7 +22,7 @@ const NextArrow = ({ onClick }: { onClick?: () => void }) => (
     </div>
 );
 
-const PrevArrow = ({ onClick }: { onClick?: () => void }) => (
+const PrevArrow = ({onClick}: { onClick?: () => void }) => (
     <div
         className="prev-arrow absolute left-0 bottom-1/2 transform -translate-y-1/2 cursor-pointer z-10"
         onClick={onClick}
@@ -36,9 +36,9 @@ type CardShowProps = {
     items: Card[];
 };
 
-export default function CardShow({ items }: CardShowProps) {
+export default function CardShow({items}: CardShowProps) {
     const sliderRef = useRef<Slider | null>(null);
-    const isMobile = useMediaQuery({ maxWidth: 767 });
+    const isMobile = useMediaQuery({maxWidth: 767});
     const pauseTimeout = useRef<NodeJS.Timeout | null>(null);
 
     const settings = {
@@ -51,8 +51,8 @@ export default function CardShow({ items }: CardShowProps) {
         slidesToShow: isMobile ? 1 : 3,
         slidesToScroll: 1,
         arrows: true,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />
+        nextArrow: <NextArrow/>,
+        prevArrow: <PrevArrow/>
     };
 
     const handleTouchStart = () => {
@@ -105,34 +105,44 @@ export default function CardShow({ items }: CardShowProps) {
                                 )}
                                 {!card.package && (<h3 className="text-xl font-semibold mb-2">{card.title}</h3>)}
 
-                                {card.package && (<h3 className="text-3xl md:text-4xl font-medium mb-5">{card.title}</h3>)}
+                                {card.package && (
+                                    <h3 className="text-3xl md:text-4xl font-medium mb-5">{card.title}</h3>)}
 
                                 {card.icons && (
-                                    <div style={{ display: 'flex', gap: '10px', alignItems: 'center', justifyContent: 'center', color: "gray" }}>
+                                    <div style={{
+                                        display: 'flex',
+                                        gap: '10px',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        color: "gray"
+                                    }}>
                                         {card.icons.map((icon, idx) => (
-                                            <FontAwesomeIcon key={idx} icon={icon} size="1x" />
+                                            <FontAwesomeIcon key={idx} icon={icon} size="1x"/>
                                         ))}
                                     </div>
                                 )}
 
-                                {!card.package && (<p className="whitespace-pre-line text-gray-600 mb-4 flex-grow">{card.description}</p>)}
+                                {!card.package && (
+                                    <p className="whitespace-pre-line text-gray-600 mb-4 flex-grow">{card.description}</p>)}
 
-                                {card.package && (<div className="text-gray-900 pt-3 font-light text-left text-xl md:text-xl whitespace-pre-line text-gray-6 mb-4 flex-grow">
+                                {card.package && (<div
+                                    className="text-gray-900 pt-3 font-light text-left text-xl md:text-xl whitespace-pre-line text-gray-6 mb-4 flex-grow">
                                     {card.description.split('\n').map((line, idx) => {
                                         const parts = line.split(/(\*\*[^\*]+\*\*)/g); // Separă după **text**
                                         return (
-                                            <p key={idx} style={{ margin: 0 }}>
+                                            <p key={idx} style={{margin: 0}}>
                                                 {parts.map((part, i) => {
                                                     if (/^\*\*[^*]+\*\*$/.test(part)) {
                                                         const boldText = part.slice(2, -2); // scoate ** **
-                                                        return <strong key={i} style={{color:"#109dae"}}>{boldText}</strong>;
+                                                        return <strong key={i}
+                                                                       style={{color: "#109dae"}}>{boldText}</strong>;
                                                     }
                                                     return part;
                                                 })}
                                             </p>
                                         );
                                     })}
-                               </div>)}
+                                </div>)}
 
                                 {card.button && (
                                     <Link

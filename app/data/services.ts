@@ -13,7 +13,7 @@ export const SERVICES: Card[] = [
     {
         id: '2',
         title: 'Video Prezentare Proprietate',
-        iframe: 'https://player.mux.com/DP9Pzgga2Pc5nvN3AgFICg2ocL3GDMdlJCoSr6YcypQ?autoplay=true&muted=true&loop=true&metadata-video-title=hero-video',
+        iframe: 'https://player.mux.com/dGvF3hHi9EBzVR535JSd554sECuncafc8iZeL6SNMmk?autoplay=true&muted=true&loop=true&metadata-video-title=hero-video',
         description:
             'Producem videoclipuri de prezentare a proprietății în format orizontal și vertical 4K, ideal pentru o vizualizare cinematografică detaliată. Includem cadre profesionale filmate de la sol și din aer, evidențiind cele mai importante aspecte ale spațiului.',
         package: false,
@@ -38,7 +38,7 @@ export const SERVICES: Card[] = [
     {
         id: '5',
         title: 'Video Reel Vertical 4K Prezentare Proprietate Agent',
-        iframe: 'https://player.mux.com/DP9Pzgga2Pc5nvN3AgFICg2ocL3GDMdlJCoSr6YcypQ?autoplay=true&muted=true&loop=true&metadata-video-title=hero-video',
+        iframe: 'https://player.mux.com/vF9kIvRJZWZOYYrvUOEAluue02co6rAUWmvY6mNibEfE?autoplay=true&muted=true&loop=true&metadata-video-title=hero-video',
         description:
             'Creăm videoclipuri scurte și dinamice în format vertical 4K, perfecte pentru promovarea rapidă a proprietăților pe platformele sociale. Concepute pentru a atrage atenția și a oferi o privire rapidă asupra caracteristicilor cheie.',
         package: false,
