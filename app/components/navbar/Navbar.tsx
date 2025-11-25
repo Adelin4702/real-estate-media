@@ -26,10 +26,10 @@ export default function Navbar() {
                 >
                     <Link href="/" aria-label="Real Estate Media Home">
                         <Image
-                            src="/logo-sm.webp"
+                            src="/logo-white.webp"
                             alt="Logo"
-                            width={90}
-                            height={50}
+                            height={100}
+                            width={80}
                         />
                     </Link>
                 </motion.div>

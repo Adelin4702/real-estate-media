@@ -1,19 +1,9 @@
-import { Geist, Geist_Mono, Oswald } from "next/font/google";
+import { Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import CookieConsentWrapper from "./components/commons/CookieConsentWrapper";
 import type { Metadata } from "next";
-
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
 
 const oswald = Oswald({
     subsets: ["latin"],

@@ -7,6 +7,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faFacebook, faInstagram, faTiktok, faYoutube} from '@fortawesome/free-brands-svg-icons';
 import {NAV_LINKS} from '../commons/navLinks';
 import {iconVariants, textVariants} from "../commons/variants";
+import Image from "next/image";
 
 export default function Footer() {
 
@@ -22,7 +23,7 @@ export default function Footer() {
                         viewport={{once: true}}
                         className="text-center"
                     >
-                        <h3 className="text-xl font-semibold mb-4">Navigare</h3>
+                        <h3 className="text-xl font-semibold mb-4">NAVIGARE</h3>
                         <ul className="space-y-2">
                             {NAV_LINKS.map((link) => (
                                 <li key={link.href}>
@@ -45,7 +46,14 @@ export default function Footer() {
                         viewport={{ once: true }}
                         className="text-center"
                     >
-                        <h3 className="text-xl font-semibold mb-4">Urmărește-ne</h3>
+                        <h3 className="block sm:hidden text-xl font-semibold mb-4">URMĂREȘTE-NE</h3>
+                        <Image
+                            src={"/logo-white.webp"}
+                            alt={"logo"}
+                            className="hidden sm:block mx-auto block pb-3 pt-8"
+                            width={150}
+                            height={150}
+                        />
                         <ul className="flex justify-center space-x-4">
                             <li>
                                 <motion.a
@@ -112,7 +120,7 @@ export default function Footer() {
                         viewport={{once: true}}
                         className="text-center"
                     >
-                        <h3 className="text-xl font-semibold mb-4">Contact</h3>
+                        <h3 className="text-xl font-semibold mb-4">CONTACT</h3>
                         <ul className="space-y-2">
                             <li>
                                 <a
